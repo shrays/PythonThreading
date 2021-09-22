@@ -1,10 +1,10 @@
-def convert(lst):
-    return (lst[0].split())
- 
-# Driver code
-lst =  ["Abc def ghi"]
-print( convert(lst))
 
-my_dict = {'a': 'hello', 'b': 'world'}
-for key, value in my_dict.items():
-    print(key)
+li = [1,2,3,4,5,6,7,8]
+for range(2,5) in li:
+    print
+
+for x in range(words:
+        if x in data:
+            data[x] += 1
+        else:
+            data[x] = 1

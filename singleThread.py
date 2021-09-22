@@ -1,5 +1,3 @@
-data = {}
-
 # The program will take text file as input.
 # 
 #You will create a key-value data structure to store data, where each word is a key and the
@@ -16,18 +14,18 @@ data = {}
 # each word in the text file.
 # 
 # Measure the time by adding time stamp before reading the text file and after computed the sum.
+import time
 
+data = {}
 words = [open('input.txt', 'r').read()]
 words = words[0].split()
-print(words)
+#print(words)
 
+start_time = time.time()
 for x in words:
     if x in data:
         data[x] += 1
     else:
         data[x] = 1
-
-print(data)
-
-
-# tfile.close()
+print("--- SINGLE THREAD: %s seconds ---" % (time.time() - start_time))
+#print(data)
