@@ -26,11 +26,11 @@ print("- SINGLE THREAD\t:  %s seconds" % single_time)
 
 # ----- MULTI THREADING -----
 
-tCount = 4 # Number of Threads
-threads = []
-wordsLists = []
-dictList = []
-dictionary = {}
+tCount = 4 # number of threads
+threads = [] # threads
+wordsLists = [] # specific list of words for each thread
+dictList = [] # list of dictionary for each thread
+dictionary = {} # dictionary of wordLists for each thread
 
 numSection = int(math.floor(len(words)/float(tCount))) # Calculates workload for each thread
 for i in range(tCount):
