@@ -1,10 +1,10 @@
 import time
 
-data = {}
 words = [open('input.txt', 'r').read()]
 words = words[0].split()
 #print(words)
 
+data = {}
 start_time = time.time() # starts time clock
 for x in words: # counts word(key) occurences(value) in list to dictionary
     if x in data:

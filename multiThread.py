@@ -6,9 +6,8 @@ from collections import Counter
 tCount = 4 # Number of Threads
 words = [open('input.txt', 'r').read()]
 words = words[0].split() # each words gets list index
-length = len(words)
 
-numSection = int(math.floor(length/float(tCount))) # Calculates workload for each thread
+numSection = int(math.floor(len(words)/float(tCount))) # Calculates workload for each thread
 wordsLists = [] 
 for i in range(tCount): # partitions words[] into 4 equal lists
     if i != tCount - 1:
@@ -32,6 +31,7 @@ threads = []
 start_time = time.time() # starts time clock
 for i in range(tCount):
     t = threading.Thread(target = do_text(wordsLists[i], dictList[i]))
+    
     threads.append(t)
 print("--- MULTI THREAD: %s seconds ---" % (time.time() - start_time))
 for i in range(tCount):
